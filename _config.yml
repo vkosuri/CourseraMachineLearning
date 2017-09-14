@@ -1,0 +1,9 @@
+title: Coursera Machine Learning
+email: venkatamallikarjunarao.kosuri@gmail.com
+theme: jekyll-theme-cayman
+gems:
+  - jemoji
+  - jekyll-relative-links
+markdown: kramdown
+twitter_username: mallikarjunarao
+github_username: vkosuri
