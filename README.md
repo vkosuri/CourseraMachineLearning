@@ -72,8 +72,8 @@ Source: http://scott.fortmann-roe.com/docs/BiasVariance.html
 | Nural Networks 	|  	| ![nural_cost](/extra/img/nural_cost.gif) 	|  	|                                                                                      |
 
 ### Regression with Pictures
-[Linear Regression](http://adit.io/posts/2016-02-20-Linear-Regression-in-Pictures.html)
-[Logistic Regression](http://adit.io/posts/2016-03-13-Logistic-Regression.html#non-linear-classification)
+- [Linear Regression](http://adit.io/posts/2016-02-20-Linear-Regression-in-Pictures.html)
+- [Logistic Regression](http://adit.io/posts/2016-03-13-Logistic-Regression.html#non-linear-classification)
 
 ## Video lectures Index
 [https://class.coursera.org/ml/lecture/preview](https://class.coursera.org/ml/lecture/preview)
