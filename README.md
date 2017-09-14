@@ -29,31 +29,45 @@ negative gradient (using a learning rate alpha)
 
 #### Differnce between cost function and gradient descent functions
 <table>
-    <th> Cost Function </th>
-    <th> Gradient Descent </th>
-    <tr VALIGN=TOP>
-    <td> <pre> <code>
-    function J = computeCostMulti(X, y, theta)
-        m = length(y); % number of training examples
-        J = 0;
-        predictions =  X*theta;
-        sqerrors = (predictions - y).^2;
-        J = 1/(2*m)* sum(sqerrors);
-    end
-    </code> </pre> </td>
-    <td> <pre> <code>
-    function [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters)    
-        m = length(y); % number of training examples
-        J_history = zeros(num_iters, 1);
-        for iter = 1:num_iters
-            predictions =  X * theta;
-            updates = X' * (predictions - y);
-            <b>theta = theta - alpha * (1/m) * updates;
-            J_history(iter) = computeCostMulti(X, y, theta);</b>
-        end
-    end
-    </code> </pre> </td>
-    </tr>
+    <colgroup>
+        <col width="50%" />
+        <col width="50%" />
+    </colgroup>
+    <thead>
+        <tr class="header">
+            <th> Cost Function </th>
+            <th> Gradient Descent </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr valign="top">
+            <td markdown="span">
+            <pre><code>
+            function J = computeCostMulti(X, y, theta)
+                m = length(y); % number of training examples
+                J = 0;
+                predictions =  X*theta;
+                sqerrors = (predictions - y).^2;
+                J = 1/(2*m)* sum(sqerrors);
+            end
+            </code></pre>
+            </td>
+            <td markdown="span">
+            <pre><code>
+            function [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters)    
+                m = length(y); % number of training examples
+                J_history = zeros(num_iters, 1);
+                for iter = 1:num_iters
+                    predictions =  X * theta;
+                    updates = X' * (predictions - y);
+                    theta = theta - alpha * (1/m) * updates;
+                    J_history(iter) = computeCostMulti(X, y, theta);
+                end
+            end
+            </code></pre>
+            </td>
+        </tr>
+    </tbody>
 </table>
 
 ### Bias and Variance
