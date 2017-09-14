@@ -29,43 +29,31 @@ negative gradient (using a learning rate alpha)
 
 #### Differnce between cost function and gradient descent functions
 <table>
-<th>
-Cost Function
-</th>
-<th>
-Gradient Descent
-</th>
-<tr VALIGN=TOP>
-<td>
-<pre>
-<code>
-function J = computeCostMulti(X, y, theta)
-    m = length(y); % number of training examples
-    J = 0;
-    predictions =  X*theta;
-    sqerrors = (predictions - y).^2;
-    J = 1/(2*m)* sum(sqerrors);
-end
-</code>
-</pre>
-</td>
-<td>
-<pre>
-<code>
-function [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters)    
-    m = length(y); % number of training examples
-    J_history = zeros(num_iters, 1);
-    for iter = 1:num_iters
-        predictions =  X * theta;
-        updates = X' * (predictions - y);
-        theta = theta - alpha * (1/m) * updates;
-        J_history(iter) = computeCostMulti(X, y, theta);
+    <th> Cost Function </th>
+    <th> Gradient Descent </th>
+    <tr VALIGN=TOP>
+    <td> <pre> <code>
+    function J = computeCostMulti(X, y, theta)
+        m = length(y); % number of training examples
+        J = 0;
+        predictions =  X*theta;
+        sqerrors = (predictions - y).^2;
+        J = 1/(2*m)* sum(sqerrors);
     end
-end
-</code>
-</pre>
-</td>
-</tr>
+    </code> </pre> </td>
+    <td> <pre> <code>
+    function [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters)    
+        m = length(y); % number of training examples
+        J_history = zeros(num_iters, 1);
+        for iter = 1:num_iters
+            predictions =  X * theta;
+            updates = X' * (predictions - y);
+            <b>theta = theta - alpha * (1/m) * updates;
+            J_history(iter) = computeCostMulti(X, y, theta);</b>
+        end
+    end
+    </code> </pre> </td>
+    </tr>
 </table>
 
 ### Bias and Variance
@@ -75,13 +63,13 @@ Source: http://scott.fortmann-roe.com/docs/BiasVariance.html
 
 ### Hypotheis and Cost Function Table
 
-| Algorithem                                 | Hypothesis Function                                                                   | Cost Function                                                                 | Gradient Descent                                                                      |
-|--------------------------------------------|---------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| Linear Regression                          | ![linear_regression_hypothesis](/extra/img/linear_hypothesis.gif)                     | ![linear_regression_cost](/extra/img/linear_cost.gif)                         |                                                                                       |
-| Linear Regression with Multiple variables  | ![linear_regression_multi_var_hypothesis](/extra/img/linear_multi_var_hypothesis.gif) | ![linear_regression_multi_var_cost](/extra/img/linear_multi_var_cost.gif)     | ![linear_regression_multi_var_gradient](/extra/img/linear_multi_var_gradient.gif)     |
-| Logistic Regression                        | ![logistic_regression_hypothesis](/extra/img/logistic_hypothesis.gif)                 | ![logistic_regression_cost](/extra/img/logistic_cost.gif)                     | ![logistic_regression_gradient](/extra/img/logistic_gradient.gif)                     |
-| Logistic Regression with Multiple Variable |                                                                                       | ![logistic_regression_multi_var_cost](/extra/img/logistic_multi_var_cost.gif) | ![logistic_regression_multi_var_gradient](/extra/img/logistic_multi_var_gradient.gif) |
-| Nural Networks                             |                                                                                       | ![nural_cost](/extra/img/nural_cost.gif)                                      |                                                                                       |
+| Algorithem 	| Hypothesis Function 	| Cost Function 	| Gradient Descent 	|
+|--------------------------------------------	|-----------------------------------------------------------------------	|-------------------------------------------------------------------------------	|---------------------------------------------------------------------------------------	|
+| Linear Regression 	| ![linear_regression_hypothesis](/extra/img/linear_hypothesis.gif) 	| ![linear_regression_cost](/extra/img/linear_cost.gif) 	|  	|
+| Linear Regression with Multiple variables 	| ![linear_regression_hypothesis](/extra/img/linear_hypothesis.gif) 	| ![linear_regression_cost](/extra/img/linear_cost.gif) 	| ![linear_regression_multi_var_gradient](/extra/img/linear_multi_var_gradient.gif) 	|
+| Logistic Regression 	| ![logistic_regression_hypothesis](/extra/img/logistic_hypothesis.gif) 	| ![logistic_regression_cost](/extra/img/logistic_cost.gif) 	| ![logistic_regression_gradient](/extra/img/logistic_gradient.gif) 	|
+| Logistic Regression with Multiple Variable 	|  	| ![logistic_regression_multi_var_cost](/extra/img/logistic_multi_var_cost.gif) 	| ![logistic_regression_multi_var_gradient](/extra/img/logistic_multi_var_gradient.gif) 	|
+| Nural Networks 	|  	| ![nural_cost](/extra/img/nural_cost.gif) 	|  	|                                                                                      |
 
 ### Regression with Pictures
 [Linear Regression](http://adit.io/posts/2016-02-20-Linear-Regression-in-Pictures.html)
