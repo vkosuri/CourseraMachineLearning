@@ -14,15 +14,78 @@ This page continas all my coursera machine learning courses and resources :book:
 9. [Aditional Information](#aditional-information)
 
 ## Breif Intro
+
 The most of the course talking about **hypothesis function** and minimising **cost funtions**
 
-| Algorithem          	| Hypothesis Function                                                          	| Cost Function                                                                      	|
-|---------------------	|------------------------------------------------------------------------------	|------------------------------------------------------------------------------------	|
-| Linear Regression   	| ![linear_regression_hypothesis](/extra/img/linear_regression_hypothesis.gif) 	| ![linear_regression_cost_function](/extra/img/linear_regression_cost_function.gif) 	|
-| Logistic Regression 	|                                                                              	|                                                                                    	|
+### Hypothesis
+A hypothesis is a certain function that we believe (or hope) is similar to the true function, the target function that we want to model. In context of email spam classification, it would be the rule we came up with that allows us to separate spam from non-spam emails.
 
-## :boom: Current Status :point_down:
-![coursera_course_completion](/extra/img/coursera_course_completion.png)
+### Cost Function
+The cost function or **Sum of Squeared Errors(SSE)** is a measure of how far away our hypothesis is from the optimal hypothesis. The closer our hypothesis matches the training examples, the smaller the value of the cost function. Theoretically, we would like J(θ)=0
+
+### Gradient Descent
+Gradient descent is an iterative minimization method. The gradient of the error function always shows in the direction of the steepest ascent of the error function. Thus, we can start with a random weight vector and subsequently follow the
+negative gradient (using a learning rate alpha)
+
+#### Differnce between cost function and gradient descent functions
+<table>
+<th>
+Cost Function
+</th>
+<th>
+Gradient Descent
+</th>
+<tr VALIGN=TOP>
+<td>
+<pre>
+<code>
+function J = computeCostMulti(X, y, theta)
+    m = length(y); % number of training examples
+    J = 0;
+    predictions =  X*theta;
+    sqerrors = (predictions - y).^2;
+    J = 1/(2*m)* sum(sqerrors);
+end
+</code>
+</pre>
+</td>
+<td>
+<pre>
+<code>
+function [theta, J_history] = gradientDescentMulti(X, y, theta, alpha, num_iters)    
+    m = length(y); % number of training examples
+    J_history = zeros(num_iters, 1);
+    for iter = 1:num_iters
+        predictions =  X * theta;
+        updates = X' * (predictions - y);
+        theta = theta - alpha * (1/m) * updates;
+        J_history(iter) = computeCostMulti(X, y, theta);
+    end
+end
+</code>
+</pre>
+</td>
+</tr>
+</table>
+
+### Bias and Variance
+When we discuss prediction models, prediction errors can be decomposed into two main subcomponents we care about: error due to "bias" and error due to "variance". There is a tradeoff between a model's ability to minimize bias and variance. Understanding these two types of error can help us diagnose model results and avoid the mistake of over- or under-fitting.
+
+Source: http://scott.fortmann-roe.com/docs/BiasVariance.html
+
+### Hypotheis and Cost Function Table
+
+| Algorithem                                 | Hypothesis Function                                                                   | Cost Function                                                                 | Gradient Descent                                                                      |
+|--------------------------------------------|---------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| Linear Regression                          | ![linear_regression_hypothesis](/extra/img/linear_hypothesis.gif)                     | ![linear_regression_cost](/extra/img/linear_cost.gif)                         |                                                                                       |
+| Linear Regression with Multiple variables  | ![linear_regression_multi_var_hypothesis](/extra/img/linear_multi_var_hypothesis.gif) | ![linear_regression_multi_var_cost](/extra/img/linear_multi_var_cost.gif)     | ![linear_regression_multi_var_gradient](/extra/img/linear_multi_var_gradient.gif)     |
+| Logistic Regression                        | ![logistic_regression_hypothesis](/extra/img/logistic_hypothesis.gif)                 | ![logistic_regression_cost](/extra/img/logistic_cost.gif)                     | ![logistic_regression_gradient](/extra/img/logistic_gradient.gif)                     |
+| Logistic Regression with Multiple Variable |                                                                                       | ![logistic_regression_multi_var_cost](/extra/img/logistic_multi_var_cost.gif) | ![logistic_regression_multi_var_gradient](/extra/img/logistic_multi_var_gradient.gif) |
+| Nural Networks                             |                                                                                       | ![nural_cost](/extra/img/nural_cost.gif)                                      |                                                                                       |
+
+### Regression with Pictures
+[Linear Regression](http://adit.io/posts/2016-02-20-Linear-Regression-in-Pictures.html)
+[Logistic Regression](http://adit.io/posts/2016-03-13-Logistic-Regression.html#non-linear-classification)
 
 ## Video lectures Index
 [https://class.coursera.org/ml/lecture/preview](https://class.coursera.org/ml/lecture/preview)
@@ -117,7 +180,7 @@ The most of the course talking about **hypothesis function** and minimising **co
 - [Linear Algebra Review and Reference Zico Kolter](/extra/cs229-linalg.pdf)
 - [CS229 Lecture notes](/extra/cs229-notes1.pdf)
 - [CS229 Problems](/extra/cs229-prob.pdf)
-- [Financial time series forecasting with machine learning techniques](/extra/machine\ learning\ stocks.pdf)
+- [Financial time series forecasting with machine learning techniques](/extra/machine%20learning%20stocks.pdf)
 - [Octave Examples](/extra/octave_session.m)
 
 ## Online E Books
@@ -132,6 +195,13 @@ The most of the course talking about **hypothesis function** and minimising **co
 
 
 ## Aditional Information
+
+## :boom: Course Status :point_down:
+![coursera_course_completion](/extra/img/coursera_course_completion.png)
+
+### Links
+- [What are the top 10 problems in deep learning for 2017?](https://www.quora.com/What-are-the-top-10-problems-in-deep-learning-for-2017)
+- [When will the deep learning bubble burst?](https://www.quora.com/When-will-the-deep-learning-bubble-burst)
 
 ### Statistics Models
 
