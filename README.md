@@ -66,7 +66,7 @@ Source: http://scott.fortmann-roe.com/docs/BiasVariance.html
 | Algorithem 	| Hypothesis Function 	| Cost Function 	| Gradient Descent 	|
 |--------------------------------------------	|-----------------------------------------------------------------------	|-------------------------------------------------------------------------------	|---------------------------------------------------------------------------------------	|
 | Linear Regression 	| ![linear_regression_hypothesis](/extra/img/linear_hypothesis.gif) 	| ![linear_regression_cost](/extra/img/linear_cost.gif) 	|  	|
-| Linear Regression with Multiple variables 	| ![linear_regression_hypothesis](/extra/img/linear_hypothesis.gif) 	| ![linear_regression_cost](/extra/img/linear_cost.gif) 	| ![linear_regression_multi_var_gradient](/extra/img/linear_multi_var_gradient.gif) 	|
+| Linear Regression with Multiple variables 	| ![linear_regression_hypothesis](/extra/img/linear_hypothesis.gif) 	| ![linear_regression_cost](/extra/img/linear_cost.gif) 	| ![linear_regression_multi_var_gradient](/extra/img/linear_multi_var_gradient_descent.gif) 	|
 | Logistic Regression 	| ![logistic_regression_hypothesis](/extra/img/logistic_hypothesis.gif) 	| ![logistic_regression_cost](/extra/img/logistic_cost.gif) 	| ![logistic_regression_gradient](/extra/img/logistic_gradient.gif) 	|
 | Logistic Regression with Multiple Variable 	|  	| ![logistic_regression_multi_var_cost](/extra/img/logistic_multi_var_cost.gif) 	| ![logistic_regression_multi_var_gradient](/extra/img/logistic_multi_var_gradient.gif) 	|
 | Nural Networks 	|  	| ![nural_cost](/extra/img/nural_cost.gif) 	|  	|                                                                                      |
