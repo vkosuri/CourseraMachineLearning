@@ -171,7 +171,7 @@ Source: http://scott.fortmann-roe.com/docs/BiasVariance.html
 - [Program Exercise Notes](/home/week-9/exercises/Programming%20Ex.8.pdf)
 
 ### Week 10 - Due 09/17/17:
-- Large scale machine learning - [pdf](/home/week-10/lectures/pdf/Lecture17.pdf) - [ppt](/home/week-11/lectures/ppt/Lecture17.ppt)
+- Large scale machine learning - [pdf](/home/week-10/lectures/pdf/Lecture17.pdf) - [ppt](/home/week-10/lectures/ppt/Lecture17.ppt)
 - [Lecture Notes](/home/week-10/lectures/notes.pdf)
 
 ### Week 11 - Due 09/24/17:
