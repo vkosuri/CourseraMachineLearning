@@ -118,8 +118,8 @@ Source: http://scott.fortmann-roe.com/docs/BiasVariance.html
 - [Program Exercise Notes](/home/week-2/exercises/Programming%20Ex.1.pdf)
 
 ### Week 3 - Due 07/30/17:
-- Logistic regression - [pdf](/home/week-2/lectures/pdf/Lecture4.pdf) - [ppt](/home/week-2/lectures/ppt/Lecture4.pptx)
-- Regularization - [pdf](/home/week-2/lectures/pdf/Lecture4.pdf) - [ppt](/home/week-2/lectures/ppt/Lecture4.pptx)
+- Logistic regression - [pdf](/home/week-3/lectures/pdf/Lecture6.pdf) - [ppt](/home/week-3/lectures/ppt/Lecture6.pptx)
+- Regularization - [pdf](/home/week-3/lectures/pdf/Lecture7.pdf) - [ppt](/home/week-3/lectures/ppt/Lecture7.pptx)
 - Programming Exercise 2: Logistic Regression - [pdf](/home/week-3/exercises/machine-learning-ex2/ex2.pdf) - [Problem](home/week-3/exercises/machine-learning-ex2.zip) - [Solution](/home/week-3/exercises/machine-learning-ex2/ex2)
 - [Lecture Notes](/home/week-3/lectures/notes.pdf)
 - [Errata](/home/week-3/errata.pdf)
